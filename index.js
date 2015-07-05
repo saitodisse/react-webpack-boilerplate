@@ -38,9 +38,9 @@ app.get('/*', function(req, res) {
   });
 });
 
-var port = Number(process.env.PORT || 3001);
+var port = Number(process.env.HOT_PORT || 3001);
 app.listen(port, function () {
-  console.log('server running at localhost:3001, go refresh and see magic');
+  console.log('server running at 0.0.0.0:3001, go refresh and see magic');
 });
 
 if (env.production === false) {
@@ -62,14 +62,14 @@ if (env.production === false) {
     historyApiFallback: true,
 
     headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:3001',
-      'Access-Control-Allow-Headers': 'X-Requested-With'
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
     }
-  }).listen(3000, 'localhost', function (err) {
+  }).listen(3000, '0.0.0.0', function(err) {
     if (err) {
       console.log(err);
     }
 
-    console.log('webpack dev server listening on localhost:3000');
+    console.log('webpack dev server listening on 0.0.0.0:3000');
   });
 }

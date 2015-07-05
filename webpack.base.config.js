@@ -24,7 +24,7 @@ module.exports = {
   output: {
     path: path.join(process.cwd(), '/client'),
     pathInfo: true,
-    publicPath: 'http://localhost:3000/client/',
+    publicPath: 'http://ppp.dev.azk.io/client/',
     filename: 'main.js'
   },
 

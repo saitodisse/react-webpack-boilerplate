@@ -21,12 +21,6 @@ azk shell -c'jest'
 azk start
 ```
 
-## FIXME: open webpack dev
-
-http://ppp.dev.azk.io:[HOT_PORT]/
-
-------------
-
 # original
 
 ## Install
@@ -54,7 +48,7 @@ It's currently in a separate branch, [facebook/jest/tree/0.5.x](https://github.c
 $ npm start
 ```
 
-Go to [http://0.0.0.0:3001](http://0.0.0.0:3001) and see the magic happen.
+Go to [http://ppp.azk.dev.io](http://ppp.azk.dev.io) and see the magic happen.
 
 ## Production
 

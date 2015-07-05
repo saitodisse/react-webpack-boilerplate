@@ -39,8 +39,10 @@ app.get('/*', function(req, res) {
 });
 
 var port = Number(process.env.HTTP_PORT || 3001);
+var server_url = 'http://' + process.env.HOT_HOST_NAME;
+
 app.listen(port, function () {
-  console.log('server running at 0.0.0.0:' + port + ', go refresh and see magic');
+  console.log('server running at ' + server_url + ', go refresh and see magic');
 });
 
 if (env.production === false) {
@@ -70,6 +72,6 @@ if (env.production === false) {
       console.log(err);
     }
 
-    console.log('webpack dev server listening on 0.0.0.0:3000');
+    console.log('webpack dev server listening on ' + server_url + ':3000');
   });
 }

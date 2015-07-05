@@ -4,7 +4,7 @@ systems({
     depends: [],
 
     // More images:  http://images.azk.io
-    image: {docker: 'azukiapp/node:0.12'},
+    image: {docker: 'library/iojs:latest'},
 
     // Steps to execute before running instances
     provision: [
@@ -34,7 +34,8 @@ systems({
       // Make sure that the PORT value is the same as the one
       // in ports/http below, and that it's also the same
       // if you're setting it in a .env file
-      NODE_ENV: 'dev'
+      NODE_ENV: 'dev',
+      PATH: 'node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
     }
   }
 });

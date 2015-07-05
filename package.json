@@ -56,7 +56,7 @@
     "eslint": "0.24.0",
     "eslint-loader": "0.14.1",
     "eslint-plugin-react": "2.6.3",
-    "jest-cli": "0.4.13",
+    "jest-cli": "facebook/jest#0.5.x",
     "jsx-loader": "0.13.2",
     "node-libs-browser": "0.5.2",
     "react-hot-loader": "1.2.7",

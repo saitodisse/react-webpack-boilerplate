@@ -38,9 +38,9 @@ app.get('/*', function(req, res) {
   });
 });
 
-var port = Number(process.env.HOT_PORT || 3001);
+var port = Number(process.env.HTTP_PORT || 3001);
 app.listen(port, function () {
-  console.log('server running at 0.0.0.0:3001, go refresh and see magic');
+  console.log('server running at 0.0.0.0:' + port + ', go refresh and see magic');
 });
 
 if (env.production === false) {

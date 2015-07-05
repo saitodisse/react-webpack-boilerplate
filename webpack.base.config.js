@@ -16,6 +16,8 @@ objectAssign(env, {
   build: (env.production || env.staging)
 });
 
+var publicPath = 'http://' + process.env.HOT_HOST_NAME + ':' + process.env.MAIN_PORT + '/client/';
+
 module.exports = {
   target: 'web',
 
@@ -24,7 +26,7 @@ module.exports = {
   output: {
     path: path.join(process.cwd(), '/client'),
     pathInfo: true,
-    publicPath: 'http://ppp.dev.azk.io/client/',
+    publicPath: publicPath,
     filename: 'main.js'
   },
 

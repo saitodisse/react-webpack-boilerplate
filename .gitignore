@@ -3,3 +3,4 @@ npm-debug.log
 coverage/
 assets.json
 .azk/
+jest_preprocess_cache/

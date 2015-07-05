@@ -27,15 +27,19 @@ systems({
     },
     ports: {
       // exports global variables
-      http: '3000/tcp',
-      hot:  '3001/tcp'
+      main:  '3000:3000/tcp',
+      http:  '3001/tcp'
     },
     envs: {
       // Make sure that the PORT value is the same as the one
       // in ports/http below, and that it's also the same
       // if you're setting it in a .env file
+      HOT_HOST_NAME: '#{system.name}.#{azk.default_domain}',
       NODE_ENV: 'dev',
       PATH: 'node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    },
+    export_envs: {
+      MAIN_HOST_FULL: 'http://#{net.host}:#{net.port.main}'
     }
   }
 });

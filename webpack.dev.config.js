@@ -5,7 +5,7 @@ var config = require('./webpack.base.config.js');
 
 if (process.env.NODE_ENV !== 'test') {
   config.entry = [
-    'webpack-dev-server/client?http://ppp.dev.azk.io',
+    'webpack-dev-server/client?http://' + process.env.HOT_HOST_NAME + ':' + process.env.MAIN_PORT,
     'webpack/hot/dev-server',
     config.entry
   ];

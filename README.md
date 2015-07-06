@@ -9,17 +9,27 @@
 - io.js
 - jest#0.5.x
 
+## start azk
+
+```sh
+azk start
+```
+
 ## run tests
 
 ```sh
 azk shell -c'jest'
 ```
 
-## start azk
 
-```sh
-azk start
-```
+
+
+
+
+
+
+
+---------------
 
 # original
 
